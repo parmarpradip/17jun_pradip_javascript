@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="question">
+        <h2>Question-14 : What are all the types of Pop up boxes available in JavaScript?</h2>
+        <hr>
+        <p>In JavaScript, there are three types of popup boxes commonly used for interacting with the user: alert, confirm, and prompt.</p>
+
+        <b>Alert Box (alert):</b>
+           <p>Displays a message to the user in a dialog box.</p><br>
+           <b>Ex:-</b><br>
+           <p>alert("This is an alert box!");</p>
+    
+    <hr>
+
+        <b>Confirm Box (confirm):</b>
+            <p>Displays a message and provides the user with "OK" and "Cancel" buttons.</p><br>
+            <b>Ex:-</b><br>
+            <p>let result = confirm("Do you want to proceed?");  <br>
+                if (result) {  <br> 
+                  // User clicked "OK"  <br>
+                  console.log("User clicked OK");   <br>
+                } else {         <br>
+                  // User clicked "Cancel"     <br>
+                  console.log("User clicked Cancel");   <br>
+                }
+            </p>
+    <hr>
+         
+        <b>Prompt Box (prompt): </b>
+           <p>Displays a message and provides an input field for the user to enter text.</p>
+            <b>Ex:-</b><br>
+            <p>
+                let userInput = prompt("Please enter your name:", "hello");  <br>
+                if (userInput !== null) {     <br>
+                  console.log("User entered: " + userInput);   <br>
+                } else {     <br>
+                  console.log("User clicked Cancel");    <br>
+                }
+            </p>
+        </div>
+</body>
+</html>

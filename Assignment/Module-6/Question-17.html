@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="question">
+        <h2>Question-17 : What are the disadvantages of using innerHTML in JavaScript?</h2>
+        <hr>
+        <p><b>Security Risks (Cross-Site Scripting - XSS):</b></p>
+            <p>Directly manipulating innerHTML with user-generated content or untrusted data can lead to security vulnerabilities like Cross-Site 
+            Scripting (XSS).</p>
+         <p> If unvalidated user input is injected into the innerHTML, it may execute malicious scripts.</p>
+
+
+        <p><b>Performance Implications:</b></p>
+              <p>Changing the innerHTML property of an element involves parsing and re-rendering the entire content of the element.</p> 
+              <p>If you are making frequent updates to a large portion of the page, it may have performance implications compared to more targeted manipulation methods.</p>
+    
+        <p><b>Event Handlers:</b></p>
+        <p>When you use innerHTML to replace or update the content of an element, any existing event handlers attached to child elements are lost, and you'll need to 
+            reattach them</p>      
+    </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="question">
+        <h2>Question-21 : Create a slider using JavaScript</h2>
+        <hr>
+        <p><!DOCTYPE html>
+            <html lang="en">
+            <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Image Slider</title>
+              <style>
+                #slider-container {
+                  width: 400px;
+                  overflow: hidden;
+                  position: relative;
+                }
+            
+                #slider {
+                  height: 100%;
+                  width: 100%;
+                  display: flex;
+                  transition: transform 0.5s ease-in-out;
+                }
+                img {
+                    height: auto;
+                    width: auto;
+                }
+            
+                .slide {
+                  width: 100%;
+                }
+            
+                button {
+                  position: absolute;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  background-color: #3498db;
+                  color: #fff;
+                  border: none;
+                  padding: 10px;
+                  cursor: pointer;
+                }
+            
+                #prev {
+                  left: 0;
+                }
+            
+                #next {
+                  right: 0;
+                }
+              </style>
+            </head>
+            <body>
+            
+            <div id="slider-container">
+              <div id="slider">
+                <div class="slide"><img src="image/img1.jpg" alt="Image 1"></div>
+                <div class="slide"><img src="image/img2.jpg" alt="Image 2"></div>
+                <div class="slide"><img src="image/img3.jpg" alt="Image 3"></div>
+              </div>
+              <button id="prev" onclick="prevSlide">Previous</button>
+              <button id="next" onclick="nextSlide">Next</button>
+            </div>
+            
+            <script>
+              let currentIndex = 0;
+              const slider = document.getElementById('slider');
+              const slides = document.querySelectorAll('.slide');
+            
+              document.getElementById('prev').addEventListener('click', prevSlide);
+              document.getElementById('next').addEventListener('click', nextSlide);
+            
+              function prevSlide() {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                updateSlider();
+              }
+            
+              function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateSlider();
+              }
+            
+              function updateSlider() {
+                const translateValue = -currentIndex * 100 + '%';
+                slider.style.transform = 'translateX(' + translateValue + ')';
+              }
+            </script>
+            
+            </body>
+            </html>
+            </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="question">
+        <h2>Question 10: How to read and write a file using JavaScript?
+        </h2>
+        <hr>
+        <p>file=fopen(getScriptPath(),0); The function fread() is used for reading the file content.</p>
+        <p>str = fread(file,flength(file) ; The function fwrite() is used to write the contents to the file.</p>
+        <p>file = fopen("c:\MyFile.txt", 3);// opens the file for writing.</p>
+
+        <p><b>Ex:-</b><br>
+
+            &lt;input type="file" id="fileInput" /&gt; <br>
+            &lt;pre id="fileContent"&gt;&lt;/pre&gt;  <br>
+            &lt;script&gt;<br>
+                document.getElementById('fileInput').addEventListener('change', function (event) { <br>
+                  const fileInput = event.target;<br>
+                  const file = fileInput.files[0];<br>
+              
+                  if (file) { <br>
+                    const reader = new FileReader();<br>
+              
+                    reader.onload = function (e) { <br>
+                      const content = e.target.result; <br>
+                      document.getElementById('fileContent').textContent = content; <br>
+                    }; <br>
+              
+                    reader.readAsText(file); <br>
+                  } <br>
+                }); <br>
+              &lt;/script&gt;
+<br><br>
+
+
+              <input type="file" id="fileInput" />
+             <pre id="fileContent"></pre>
+              <script>
+              document.getElementById('fileInput').addEventListener('change', function (event) {
+                const fileInput = event.target;
+                const file = fileInput.files[0];
+            
+                if (file) {
+                  const reader = new FileReader();
+            
+                  reader.onload = function (e) {
+                    const content = e.target.result;
+                    document.getElementById('fileContent').textContent = content;
+                  };
+            
+                  reader.readAsText(file);
+                }
+              });
+            </script>
+        </p>
+    </div>
+</body>
+</html>

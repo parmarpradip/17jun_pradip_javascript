@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+   
+</head>
+<body>
+    <h2>Question-19 : Create basic math operation in JS</h2>
+    <hr>
+
+    <p id="result"></p>
+    <form>
+  
+        Enter a number : <input type="text" id="a" placeholder="Enter a values">
+        <br><br>
+        Enter b number : <input type="text" id="b" placeholder="Enter b values">
+        <br><br>
+        <button type="button" onclick="add()">Add</button>
+        <button type="button" onclick="sub()">Subtraction</button>
+        <button type="button" onclick="multipl()">Multiplications</button>
+        <button type="button" onclick="division()">division</button>
+        <button type="button" onclick="percan()">percentage</button>
+        </form>
+        <script>
+            function add()
+            {
+                var a=parseInt(document.getElementById("a").value);
+                var b=parseInt(document.getElementById("b").value);
+                var c=a+b;
+                // document.write(c);
+                document.getElementById("result").innerHTML="Additions of numbers is :"+c;
+            }
+            function sub()
+            {
+                var a=parseInt(document.getElementById("a").value);
+                var b=parseInt(document.getElementById("b").value);
+                var c=a-b;
+                // document.write(c);
+                document.getElementById("result").innerHTML="Subtraction of numbers is :"+c;
+            }
+            function multipl()
+            {
+                var a=parseInt(document.getElementById("a").value);
+                var b=parseInt(document.getElementById("b").value);
+                var c=a*b;
+                // document.write(c);
+                document.getElementById("result").innerHTML="Multiplications of numbers is :"+c;
+            }
+            function division()
+            {
+                var a=parseInt(document.getElementById("a").value);
+                var b=parseInt(document.getElementById("b").value);
+                var c=a/b;
+                // document.write(c);
+                document.getElementById("result").innerHTML="division of numbers is :"+c;
+            }
+            function percan()
+            {
+                var a=parseInt(document.getElementById("a").value);
+                var b=parseInt(document.getElementById("b").value);
+                var c=a*b/100;
+                // document.write(c);
+                document.getElementById("result").innerHTML="percentage of numbers is :"+c;
+            }
+        </script>
+</body>
+</html>

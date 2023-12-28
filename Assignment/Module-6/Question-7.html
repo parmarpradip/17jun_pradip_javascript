@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="question">
+        <h2>Question 7 : What is the difference between ViewState and SessionState?</h2>
+        <hr>
+
+        <p><b>ViewState:</b><br>
+                <p><b>Scope:</b> ViewState is used to persist data across postbacks for a single page.</p>
+                <p><b>Storage:</b> The data is stored as a hidden field in the page itself. It is sent to the client browser and returned to the server
+                 with each postback.</p>
+                <p><b>Size Limitations:</b> Since ViewState is sent to the client, it is typically limited by the size of a page. Storing large 
+                amounts of data in ViewState can impact page load times.</p>
+                <p><b>Security:</b> While the data is encoded, it is not meant for secure storage. Sensitive information should not be stored in ViewState.</p>
+
+        </p>
+        <br>
+        <p><b>SessionState:</b><br>   
+                <p><b>Scope:</b> SessionState is used to persist data across multiple requests for a user during their entire session on the 
+                    website.</p>
+                <p><b>Storage:</b> The data is stored on the server, and a session identifier is sent to the client. The server uses this 
+                    identifier to associate the client with its session data.</p>
+                <p><b>Size Limitations:</b> SessionState can typically store larger amounts of data compared to ViewState. However, the server's 
+                    available memory and configuration settings can impose limits.</p>
+                <p><b>Security:</b> SessionState is generally more secure than ViewState for storing sensitive information because the data 
+                    is kept on the server.</p>
+        </p>  
+    </div>
+</body>
+</html>

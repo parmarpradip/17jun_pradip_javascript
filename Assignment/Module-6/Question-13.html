@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="question">
+        <h2>Question-13 : What is the function of the delete operator?</h2>
+        <hr>
+        <p>The delete operator removes a property from an object.</p>
+        <b>Ex:-</b><br>
+        const Employee = {  <br>
+            firstname: 'xyz', <br> 
+            lastname: 'abc',  <br>
+          };  <br>
+          
+          console.log(Employee.firstname); <br>
+          // Expected output: "xyz"  <br>
+          
+          delete Employee.firstname;  <br>
+          
+          console.log(Employee.firstname); <br>
+          // Expected output: undefined   <br>
+
+          <script>
+            const Employee = {
+                firstname: 'xyz',
+                lastname: 'abc',
+              };
+              
+              console.log(Employee.firstname);
+              // Expected output: "xyz"
+              
+              delete Employee.firstname;
+              
+              console.log(Employee.firstname);
+              // Expected output: undefined
+          </script>
+    </div>
+</body>
+</html>

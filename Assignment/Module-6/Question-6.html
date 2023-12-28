@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+</head>
+<body>
+    <div class="question">
+        <h2>Question 6 : Write the code for adding new elements dynamically?</h2>
+        <hr>
+        <button id="addButton">Add Element</button>
+    <div id="container"></div>    
+    </div>
+    <script>
+        var addButton = document.getElementById("addButton");
+        var container = document.getElementById("container");
+
+        var counter = 0;
+
+        function addElement() {
+             var newElement = document.createElement("p");
+  
+              newElement.textContent = "Element " + counter;
+              container.appendChild(newElement); 
+              counter++;
+            }
+            addButton.addEventListener("click", addElement);
+
+    </script>
+</body>
+</html>
